@@ -5,6 +5,8 @@ import { useNavigate } from "react-router-dom";
 import Layout from "../../component/Layout/Layout";
 import "./question.css";
 import { FaArrowCircleRight } from "react-icons/fa";
+import TextField from '@mui/material/TextField';
+import { TextareaAutosize } from "@mui/material";
 
 function Question() {
   const navigate = useNavigate();
@@ -91,18 +93,24 @@ function Question() {
           <h4 className={"question_post_your"}>Post Your Question</h4>
           <div className={"question_headtitle2"}>
             <form onSubmit={handleSubmit}>
-              <input
+              <TextField
                 className={"question_title"}
                 ref={titleDom}
                 type="text"
-                placeholder="  Title"
+                label="  Title"
               />
-              <textarea
+                 {/* <TextareaAutosize
+        aria-label="empty textarea"
+        placeholder="Enter your text here"
+        minRows={3}
+        maxRows={10}
+                          /> */}
+              <TextField
                 rows={4}
                 className={"question_description"}
                 ref={descriptionDom}
                 type="text"
-                placeholder="  Question Description..."
+                Label="  Question Description..."
               />
               <span>
                 <button
