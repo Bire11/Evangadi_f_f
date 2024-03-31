@@ -93,25 +93,39 @@ function Question() {
           <h4 className={"question_post_your"}>Post Your Question</h4>
           <div className={"question_headtitle2"}>
             <form onSubmit={handleSubmit}>
-              <TextField
+            <input
+                className={"question_title"}
+                ref={titleDom}
+                type="text"
+                placeholder="Title"
+              />
+              <textarea
+                rows={4}
+                className={"question_description"}
+                ref={descriptionDom}
+                type="text"
+                placeholder="Question Description..."
+              />
+              {/* <TextField
                 className={"question_title"}
                 ref={titleDom}
                 type="text"
                 label="  Title"
-              />
-                 {/* <TextareaAutosize
+              /> <br/>
+                 <TextareaAutosize
+                 Label="  Question Description..."
         aria-label="empty textarea"
-        placeholder="Enter your text here"
+        placeholder="Question Description..."
         minRows={3}
         maxRows={10}
                           /> */}
-              <TextField
+              {/* <TextField
                 rows={4}
                 className={"question_description"}
                 ref={descriptionDom}
                 type="text"
                 Label="  Question Description..."
-              />
+              /> */}
               <span>
                 <button
                   className={"question_button"}
